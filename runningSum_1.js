@@ -54,7 +54,7 @@ var runningSum = function(nums) {
 
 }
 
-//nums = [1,2,3,4]
-//nums = [1,1,1,1,1]
+nums = [1,2,3,4]
+nums = [1,1,1,1,1]
 nums = [3,1,2,10,1]
 console.log(runningSum(nums))
