@@ -29,36 +29,16 @@ Constraints:
  * 
  */
 
-
 //time complexity = O(n)
 //space complexity = O(1)
 var runningSum = function(nums) {
-  //create a new array
-  let sumArray = []
-  //check if array is empty
-  if (nums.length == 0) return [];
-  
-  //this position is always the same
-  let currentSum = nums[0];
-
-  //add first element to the new array
-  sumArray.push(currentSum);
-
-  //loop, we are going to start from the second position 
-  //because we already have the first element
-  //then we have to sum every element in the array
-  //and push to the new array we create 
-  for (var i = 1; i < nums.length; i++){
-      currentSum = currentSum + nums[i];
-      sumArray.push(currentSum);
+  for (let i = 1; i < nums.length; i++) {
+   nums[i] = nums[i] + nums[i - 1];
   }
+  return nums;
+}; 
 
-  return sumArray
-
-
-}
-
-nums = [1,2,3,4]
-nums = [1,1,1,1,1]
-nums = [3,1,2,10,1]
+nums = [1,2,3,4] //Output: [1,3,6,10]
+//nums = [1,1,1,1,1]
+//nums = [3,1,2,10,1]
 console.log(runningSum(nums))

@@ -67,3 +67,11 @@ var runningSum = function(nums) {
       let currentSum = 0
       return nums.map((num) => currentSum += num)
   };
+
+  //SOLUTION 4
+  var runningSum = function(nums) {
+   for (let i = 1; i < nums.length; i++) {
+    nums[i] = nums[i] - nums[i - 1];
+   }
+   return nums;
+}; 
