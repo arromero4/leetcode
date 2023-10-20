@@ -30,7 +30,16 @@ Constraints:
  */
 var duplicateZeros = function(arr) {
     //Input: arr = [1,0,2,3,0,4,5,0]
-    //Output: [1,0,0,2,3,0,0,4]
+    //                           ^
+    //Output:     [1,0,0,2,3,0,0,4] 
+    //                          ^ 
+    //queue shift first [0]
+    //queue shift first [2,3]
+    //queue shift first [3,0,0]
+    //queue shift first [0,4]
+    //queue shift first [4,5]
+    //queue shift first [5,0,0]
+    
     let queue = [];
     for (let i = 0; i < arr.length; i++) {
         if(arr[i] === 0){
