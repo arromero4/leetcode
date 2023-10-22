@@ -44,20 +44,38 @@ Follow up: Squaring each element and sorting the new array is very trivial, coul
 //time complexity O(n)
 //space complexity O(n)
 var sortedSquares = function(nums) {
-    let left = 0
-    let rigth = nums.length - 1
-    let result = []
-    let position = nums.length - 1
-    while(left <= rigth){
-        if(nums[left]**2 > nums[rigth]**2){
-            result[position] = nums[left]**2 
+      /**
+    two pointers technique
+    1. create a pointer to compare every item on the left and right using length
+        both required to start backwards
+    2. Create a variable to store the position required to start backwards
+    3. Create new Array 
+    4. while left is less than or equal to right 
+        - if nums[left]**2 > nums[right]**2
+            new array result[position] = nums[left]**2
+            position - 1
+            left + 1
+        -else
+            new array result[position] = nums[right]**2
+            position -1
+            right - 1
+    5. return results
+     */
+    let leftIdx = 0;
+    let rigthIdx = nums.length - 1;
+    let position =  nums.length - 1;
+    let results = [];
+
+    while(leftIdx <= rigthIdx){
+        if(nums[leftIdx]**2 > nums[rigthIdx]**2 ){
+            results[position] = nums[leftIdx]**2
             position--
-            left++
+            leftIdx++
         }else{
-            result[position] = nums[rigth]**2 
+            results[position] = nums[rigthIdx]**2
             position--
-            rigth--
+            rigthIdx--
         }
     }
-    return result
+    return results
 };
