@@ -30,34 +30,32 @@ Constraints:
  */
 
 void main() {
-  List<int> nums = [1,0,2,3,0,4,5,0];
+  List<int> nums = [1, 0, 2, 3, 0, 4, 5, 0];
   print(duplicateZeros(nums));
-
 }
 
 List<int> duplicateZeros(List<int> arr) {
-    //Input: arr = [1,0,2,3,0,4,5,0]
-    //                           ^
-    //Output:     [1,0,0,2,3,0,0,4] 
-    //                          ^ 
-    //queue shift first [0]
-    //queue shift first [2,3]
-    //queue shift first [3,0,0]
-    //queue shift first [0,4]
-    //queue shift first [4,5]
-    //queue shift first [5,0,0]
+  //Input: arr = [1,0,2,3,0,4,5,0]
+  //                           ^
+  //Output:     [1,0,0,2,3,0,0,4]
+  //                          ^
+  //queue shift first [0]
+  //queue shift first [2,3]
+  //queue shift first [3,0,0]
+  //queue shift first [0,4]
+  //queue shift first [4,5]
+  //queue shift first [5,0,0]
 
-    List<int> queue = [];
-    for (var i = 0; i < arr.length; i++) {
-      if(arr[i] == 0){
-        queue.add(0);
-        queue.add(0);
-      }else{
-        queue.add(arr[i]);
-      }
-      int first = queue.removeAt(0);
-      arr[i] = first;
+  List<int> queue = [];
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] == 0) {
+      queue.add(0);
+      queue.add(0);
+    } else {
+      queue.add(arr[i]);
     }
-
-};
-
+    int first = queue.removeAt(0);
+    arr[i] = first;
+  }
+  return queue;
+}
