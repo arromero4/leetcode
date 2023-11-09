@@ -42,28 +42,24 @@ Constraints:
 
 Follow up: Can you find an O(n) solution?
  */
-function thirdMax(nums) {
-    let first = second = third = -Infinity;
-
+var thirdMax = function(nums) {
+    let first = second = third = Number.MIN_VALUE;
     for (let num of nums) {
-        if (num > first) {
+        if(num> first){
             third = second;
             second = first;
             first = num;
-        } else if (num < first && num > second) {
+        }else if(first > num && num > second){
             third = second;
             second = num;
-        } else if (num < second && num > third) {
+        }else if(second > num && num > third){
             third = num;
         }
-    }
 
-    if (third === -Infinity) {
-        return first;
     }
+    return third === Number.MIN_VALUE ? first : third;
+};
 
-    return third;
-}
 // Example usage:
 const nums1 = [3, 2, 1];
 console.log(thirdMax(nums1)); // Output: 1
