@@ -41,9 +41,28 @@ Follow up: Could you implement a solution using only O(1) extra space complexity
  * @param {number[]} nums
  * @return {number}
  */
-var missingNumber = function(nums) {
+var missingNumber1 = function(nums) {
     const n = nums.length;
     const expectedSum = (n * (n + 1)) / 2;
     const actualSum = nums.reduce((sum, num) => sum + num, 0);
     return expectedSum - actualSum;
+};
+
+var missingNumber2 = function(nums) {
+    const n = nums.length;
+  
+  // XOR all numbers from 0 to n
+  let xor1 = 0;
+  for (let i = 0; i <= n; i++) {
+    xor1 ^= i;
+  }
+
+  // XOR all elements in the array
+  let xor2 = 0;
+  for (const num of nums) {
+    xor2 ^= num;
+  }
+
+  // XOR of the two results gives the missing number
+  return xor1 ^ xor2;
 };
