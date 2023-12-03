@@ -1,3 +1,5 @@
+package LinkedList;
+
 // 141. Linked List Cycle
 // Solved
 // Easy
@@ -40,18 +42,19 @@
 
 // Follow up: Can you solve it using O(1) (i.e. constant) memory?
 
-/**
- * Definition for singly-linked list.
- * class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) {
- *         val = x;
- *         next = null;
- *     }
- * }
- */
-public class Solution {
+
+ //Definition for singly-linked list.
+ class ListNode {
+     int val;
+     ListNode next;
+     ListNode(int x) {
+         val = x;
+         next = null;
+     }
+    }
+
+
+public class hasCycle {
     public boolean hasCycle(ListNode head) {
         ListNode slow = head;
         ListNode fast = head;
