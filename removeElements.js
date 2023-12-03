@@ -26,7 +26,17 @@
 // The number of nodes in the list is in the range [0, 104].
 // 1 <= Node.val <= 50
 // 0 <= val <= 50
-
+//Definition for singly-linked list.
+  function ListNode(val, next) {
+      this.val = (val===undefined ? 0 : val)
+      this.next = (next===undefined ? null : next)
+  }
+ 
+/**
+ * @param {ListNode} head
+ * @param {number} val
+ * @return {ListNode}
+ */
 var removeElements = function(head, val) {
     let dummy = new ListNode(-1)
     dummy.next = head
@@ -46,5 +56,5 @@ var removeElements = function(head, val) {
     return dummy.next
 };
 
-head = [7,7,7,7], val = 7
+head = [1,2,6,3,4,5,6], val = 6
 console.log(removeElements(head, val))
