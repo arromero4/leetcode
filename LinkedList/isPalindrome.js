@@ -6,7 +6,7 @@
 // palindrome
 //  or false otherwise.
 
- 
+
 
 // Example 1:
 
@@ -18,23 +18,24 @@
 
 // Input: head = [1,2]
 // Output: false
- 
+
 
 // Constraints:
 
 // The number of nodes in the list is in the range [1, 105].
 // 0 <= Node.val <= 9
- 
+
 
 // Follow up: Could you do it in O(n) time and O(1) space?
 
-/**
- * Definition for singly-linked list.
- * function ListNode(val, next) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.next = (next===undefined ? null : next)
- * }
- */
+
+//Definition for singly-linked list.
+function ListNode(val, next) {
+    this.val = (val === undefined ? 0 : val)
+    this.next = (next === undefined ? null : next)
+}
+
+
 /**
  * @param {ListNode} head
  * @return {boolean}
@@ -42,9 +43,9 @@
 
 const reverse = head => {
     let cur = head
-    let prev =  null
+    let prev = null
     let next
-    while(cur){
+    while (cur) {
         next = cur.next
         cur.next = prev
         prev = cur
@@ -53,28 +54,31 @@ const reverse = head => {
 
     return prev
 }
-var isPalindrome = function(head) {
+var isPalindrome = function (head) {
+    if (!head || !head.next) {
+        return true;
+    }
+
     let fast = head
     let slow = head
     let startPointer = head
     let len = 0
 
-    while(fast && fast.next){
+    while (fast && fast.next) {
         fast = fast.next.next
-        slow  = slow.next
-
+        slow = slow.next
         len++
-
-        let mid = reverse(slow)
-
-        while(len){
-            len--
-            if(mid.val !== startPointer.val){
-                return false
-            }
-            mid = mid.next
-            startPointer = startPointer.next
-        }
-        return true
     }
-};
+    
+    let mid = reverse(slow)
+
+    while (len) {
+        len--
+        if (mid.val !== startPointer.val) {
+            return false
+        }
+        mid = mid.next
+        startPointer = startPointer.next
+    }
+    return true
+}
