@@ -50,31 +50,26 @@ class Node{
 }
 
 class MyLinkedList{
-    constructor(){
+      constructor(){
         this.head = new Node();
         this.tail = new Node();
         this.length = 0;
-        
         this.head.next = this.tail;
         this.tail.prev = this.head;
     }
     
     get(index){
         if(index < 0 || index >= this.length) return - 1;
-        
         let curNode = this.head.next;
-        
         while(index--) curNode = curNode.next;
-        
         return curNode.val;
-        
     }
     
     addAtHead(val){
         let prev = this.head;
         let next = this.head.next;
-        
         let node = new Node(val, prev, next);
+        
         prev.next = node;
         next.prev = node;
         
@@ -84,7 +79,6 @@ class MyLinkedList{
     addAtTail(val){
         let prev = this.tail.prev;
         let next = this.tail;
-        
         let node = new Node(val, prev, next);
         
         prev.next = node;
@@ -93,9 +87,9 @@ class MyLinkedList{
     }
     
     addAtIndex(index,val){
-        if(index < 0 || index >= this.length) return null;
+        if(index < 0 || index > this.length) return null;
         if(index === this.length){
-            this.addTail(val);
+            this.addAtTail(val);
             return
         }
         
