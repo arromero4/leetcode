@@ -16,3 +16,5 @@ void main() {
   List<int> arr = [1, 2, 3, 4, 5, 6, 7];
   foo(arr);
 }
+//these examples will help me to crack
+//an interview 

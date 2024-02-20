@@ -2,7 +2,9 @@ void main() {
   String str = "abcd";
   permutation(str);
 }
+//add comment
 
+//need to read the book
 void permutation(String str, [String prefix = ""]) {
   if (str.length == 0) {
     print(prefix);
