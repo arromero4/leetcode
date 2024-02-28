@@ -36,23 +36,21 @@ Constraints:
     for(let i=1;i <= n;i++){
         let divisibleBy3 =  i % 3 == 0
         let divisibleBy5 =  i % 5 == 0
-
-        let currStr = "";
         
         if(divisibleBy3 && divisibleBy5){
-            currStr +='FizzBuzz'
+            answer.push('FizzBuzz')
         }
         else if(divisibleBy3){
-            currStr += 'Fizz'
+            answer.push('Fizz')
         }
         else if(divisibleBy5){
-            currStr +='Buzz'
+            answer.push('Buzz')
         }
         else{
-            currStr += i.toString()
+            answer.push(i.toString())
         }
-        answer.push(currStr)
     }
+    console.log(answer.join('\n'))
     return answer
 };
 let n = 5
