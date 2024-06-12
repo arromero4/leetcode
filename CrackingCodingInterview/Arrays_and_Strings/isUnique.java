@@ -25,14 +25,14 @@ public class isUnique {
     for(int i=0; i< str.length(); i++){
       int val = str.charAt(i);
 
-      System.out.println("inicial " +char_set[val]);
+      //System.out.println("inicial " +char_set[val]);
 
       if(char_set[val]){
-        System.out.println("if " + char_set[val]);
+        //System.out.println("if " + char_set[val]);
         return false;
       }
       char_set[val] = true;
-      System.out.println("final " +char_set[val]);
+      //System.out.println("final " +char_set[val]);
     }
     
     return true;
