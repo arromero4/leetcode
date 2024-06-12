@@ -21,7 +21,7 @@ Output: 2
 class findMaxConsecutiveOnes {
     public static void main(String[] args){
         int[] nums = {1,1,0,1,1,1};
-        System.out.println(findMaxConsecutiveOnes(nums));
+        System.out.println(findMaxConsecutiveOnesM(nums));
     }
     public static int findMaxConsecutiveOnesM(int[] nums) {
         int largest = 0;
