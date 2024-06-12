@@ -5,6 +5,20 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "isUnique",
+            "request": "launch",
+            "mainClass": "CrackingCodingInterview.Arrays_and_Strings.isUnique",
+            "projectName": "leetcode_91f57af5"
+        },
+        {
+            "type": "java",
+            "name": "isUnique",
+            "request": "launch",
+            "mainClass": "CrackingCodingInterview.Arrays.isUnique",
+            "projectName": "leetcode_91f57af5"
+        },
+        {
             "name": "Dart & Flutter",
             "request": "launch",
             "type": "dart"
