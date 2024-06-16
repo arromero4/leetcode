@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "permutation2",
+            "request": "launch",
+            "mainClass": "CrackingCodingInterview.Arrays_and_Strings.permutation2",
+            "projectName": "leetcode_91f57af5"
+        },
+        {
+            "type": "java",
+            "name": "permutation",
+            "request": "launch",
+            "mainClass": "CrackingCodingInterview.Arrays_and_Strings.permutation",
+            "projectName": "leetcode_91f57af5"
+        },
+        {
+            "type": "java",
             "name": "isUnique",
             "request": "launch",
             "mainClass": "CrackingCodingInterview.Arrays_and_Strings.isUnique",
