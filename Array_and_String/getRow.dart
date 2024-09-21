@@ -25,8 +25,6 @@
 
 // Follow up: Could you optimize your algorithm to use only O(rowIndex) extra space?
 
-import 'dart:ffi';
-
 /**
  * @param {number} rowIndex
  * @return {number[]}
