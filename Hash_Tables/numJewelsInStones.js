@@ -27,10 +27,10 @@
 // # All the characters of jewels are unique.
 
 // /**
- * @param {string} jewels
- * @param {string} stones
- * @return {number}
- */
+//  * @param {string} jewels
+//  * @param {string} stones
+//  * @return {number}
+//  */
 var numJewelsInStones = function(jewels, stones) {
     let mapJewels =  new Map()
     let mapStones =  new Map()
