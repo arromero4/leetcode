@@ -42,7 +42,7 @@
 var twoSum = function(numbers, target) {
     let l = 0
     let r = numbers.length - 1
-    let cur = 0
+    let curSum = 0
     while(l < r){
         curSum = numbers[l] + numbers[r]
 
