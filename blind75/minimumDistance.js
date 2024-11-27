@@ -80,9 +80,9 @@ function minimumDistance(area) {
     }
 
     // Explore all valid directions
-    for (const [dr, dc] of directions) {
-      const newRow = currentRow + dr; //0
-      const newCol = currentCol + dc;//0
+    for (const [dr, dc] of directions) {//[0, 1]   // right // current [ 1, 0, 1 ]
+      const newRow = currentRow + dr; // 1 + 1 = 2
+      const newCol = currentCol + dc;// 1 + 0 = 1
 
       if (isValid(newRow, newCol) && !visited.has(`${newRow},${newCol}`)) {
         queue.push([newRow, newCol, distance + 1]);
