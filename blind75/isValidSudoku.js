@@ -92,3 +92,13 @@ class Solution {
       return true
   }
 }
+
+[
+    {"from": "USD", "to": "MXN", "rate:": 1.1},
+    {"from": "GBP", "to": "COP", "rate:": 23.1},
+    {"from": "EUR", "to": "GBP", "rate:": 2.1},
+    {"from": "EUR", "to": "USD", "rate:": 3.1},
+]
+
+
+//input: if I have 10 USD and choose GBP, the rate should be USD -> EUR multiply the rate by the amount (10USD) and then go back to the EUR -> GBP with the previous rate
