@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "isAnagram",
+            "request": "launch",
+            "mainClass": "isAnagram",
+            "projectName": "leetcode_91f57af5"
+        },
+        {
+            "type": "java",
             "name": "permutation2",
             "request": "launch",
             "mainClass": "CrackingCodingInterview.Arrays_and_Strings.permutation2",
