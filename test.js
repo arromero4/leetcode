@@ -1,9 +1,15 @@
-function print(){
-  var  x='5'
-  console.log(x + y)
+//fetch
+async function fetchAsync(){
+  try {
+    const response = await fetch('https://api.github.com');
+    if(!response.ok){
+      throw new Error('Error: ' + response.status);
+    }
+    const data = await response.json()
+    console.log(data);
+  } catch (error) {
+    console.log("Message error:" + error);
+  }
 }
 
-var x = 3 
-var y = 2
-print()
-console.log(x + y)
+fetchAsync();
